@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Goldman&family=Kalam:wght@300;400;700&display=swap');
+
+/* global veriables */
+:root {
+    --primaryColor: #1e1e1e;
+    --secondaryColor:#487bb2;
+}
+
+
+body, h1, ul, li, div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+    
+
+    /* will make a theme(body bg color) changer between dark and white */
+    /* background: #1e1e1e; */
+    /* color: ghostwhite; */
+}
+
+/* style for header */
+header {
+    display: inline-flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 8px 10px;
+    padding-left: 0;
+    background: linear-gradient(180deg, var(--secondaryColor), #fffffff6);
+    text-align: center;
+    z-index: 1;
+}
+header h1 {
+    background: none;
+    display: inline-block;
+    font-size: 1.4em;
+    font-family: 'Goldman', cursive;
+    color: var(--primaryColor);
+    text-align: center;
+    align-self: center;
+    margin: 0 auto;
+}
+.header-ccCamera {
+    text-align: left;
+    height: 50px;
+    max-width: 100px;
+}
+header .camera2 {
+    transform: scaleX(-1);
+}
+
+/* style for banner section */
+.banner {
+    position: relative;
+    top: 70px;
+    margin: 0 auto;
+    margin-bottom: 12vh;
+}
+
+.banner img{
+   max-width: 100%;
+   width: 1400px;
+}
+
+.banner .banner-txt {
+    background-color: rgba(112, 180, 224, 0.445);
+    color: rgb(255, 255, 255);
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+    font-size: 3vw;
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    padding: 0.5em;
+}
+
+/* style for navbar */
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 68px;
+    padding: 5px 0;
+    /* border: 1px solid #ffffff1a; */
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 8px var(--secondaryColor);
+    border-bottom: none;
+
+    /* will make a theme(body bg color) changer between dark and white */
+    /* background-color: var(--primaryColor); */
+    background-color: #fff;
+    z-index: 1;
+    
+}
+.navbar ul {
+    position: relative;
+    list-style: none;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    max-width: 100%;
+    
+}
+
+.navbar li a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: rgb(85, 85, 85);
+    font-size: 1em;
+    font-weight: 1000;
+    font-variant: small-caps;
+    padding: 15px;
+    
+    
+}
+nav li a:hover {
+    /* background-color: rgb(0, 0, 0); */
+    border-bottom: 2px solid rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
+    /* font-variant: normal; */
+    bottom: 2px;
+    left: 2px;
+}
+/* end of navbar */
+
+/* main content(body) started from here */
+main {
+    background: url(img/main-sec-bg.jpeg);
+    background-repeat: no-repeat;
+    background-position: 50% 90%;
+    background-attachment: fixed;
+    background-size: contain;
+    margin-top: 5em; /*for the gap from navbar */
+}
+
+main .main-content {
+    background-color: #ffffff;
+}
+
+/* transparent part */
+main .transparent {
+    /* margin: 1em auto; */
+    background: transparent;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    
+}
+
+
+/* .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0 auto;
+    margin-left: 1em;
+}
+.shortcut div{
+    display: inline-block;
+    grid-column: span 4;
+}
+.shortcut .shortcut-img{
+    height: 200px;
+} */
+
+
+
+
+/* .shortcut div:nth-child(1) {
+    background-color: green;
+    grid-column: 2/5;
+    padding: 10px;
+}
+.shortcut div:nth-child(2) {
+    background-color: violet;
+    grid-column: 5/8;
+    padding: 10px;
+}
+.shortcut div:nth-child(3) {
+    background-color: red;
+    grid-column: 8/11;
+    padding: 10px;
+} */
+
+
+/* start of 'shortcut' section */
+.shortcut {
+    width: 100%;
+    /* max-width: 960px; */
+    margin: 2em auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.shortcut a {
+    text-decoration: none;
+    display: block;
+}
+
+.shortcut a:hover {
+    opacity: 0.7;
+}
+
+.shortcut .shortcut-img {
+    text-align: center;
+    padding: 0.5em;
+    color: #000000;
+    max-width: 300px;
+    flex: 1 0 300px;
+    margin: 10px 5px;
+    box-shadow: 1px 1px 10px #00000e96;
+}
+
+.shortcut .shortcut-img h2 {
+    font-weight: bold;
+    font-family: 'Kalam', cursive;
+    border-bottom: 0.5px dashed #999999;
+}
+
+.shortcut .shortcut-img img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
+/* end of shortcut image link section */
+
+
+/* media queri */
+@media screen and (min-width: 768px) {
+    .header-ccCamera {
+        height: 100px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .navbar {
+        top: 110px;
+    }
+    .banner {
+        top: 120px;
+        margin-bottom: 15vh;
+    }
+}
