@@ -4,8 +4,11 @@
 
 
 .contact-button {
+    /* display: flex; */
+    justify-content: center;
+    position: relative;
     text-align: center;
-    margin: 2vh auto;
+    margin: 0 auto;
 }
 
 .contact-button a {
